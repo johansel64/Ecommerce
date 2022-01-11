@@ -1,0 +1,42 @@
+.gallery {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  }
+  
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .example-card {
+    text-align: center;
+    margin: 10px;
+  
+    .imagen{
+      width: 100%;
+    }
+  
+  }
+
+  .titulo{
+      margin: 15px;
+      text-align: center;
+      & h2{
+          font-size: 50px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+  }
+
+  .compus{
+      max-height: 100%;
+  }
+
+  .shopping-button{
+    color: rgb(2, 95, 138);
+    & :hover{
+      font-size: 20px;
+      color: rgb(14, 158, 184);
+    }
+  }

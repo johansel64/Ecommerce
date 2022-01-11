@@ -1,0 +1,55 @@
+<!--Formulario para el registro de un nuevo usuario-->
+<mat-card>
+  <mat-card-title>Registrarse</mat-card-title>
+  <form [formGroup]=formRegister.baseForm>
+
+    <mat-form-field class="full-width-input">
+      <input formControlName="nombre" matInput placeholder="Nombre" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input formControlName="apellido1" matInput placeholder="Primer Apellido" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input formControlName="apellido2" matInput placeholder="Segundo Apellido" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input type="date" formControlName="fechaNac" matInput placeholder="Fecha de nacimiento" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input type="text" formControlName="telefono" matInput placeholder="Teléfono" required>
+    </mat-form-field>
+    <h4>Datos de usuario</h4>
+    <mat-form-field class="full-width-input">
+      <input type="text" formControlName="nombreUsuario" matInput placeholder="Usuario" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input type="email" formControlName="email" matInput placeholder="Correo" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input type="password" formControlName="password" matInput placeholder="Contraseña" required>
+    </mat-form-field>
+    <h4>Ubicación</h4>
+    <mat-form-field class="full-width-input">
+      <input type="text" formControlName="provincia" matInput placeholder="Provincia" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input type="text" formControlName="canton" matInput placeholder="canton" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <input type="text" formControlName="ubicacionExacta" matInput placeholder="UbicacionExacta" required>
+    </mat-form-field>
+    <mat-form-field class="full-width-input">
+      <mat-label>Role</mat-label>
+      <mat-select formControlName="role">
+        <mat-option value="admin">Administrador</mat-option>
+        <mat-option value="user">Usuario</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <button mat-button color="primary" (click)="registrar()">Guardar</button>
+      <button mat-button mat-dialog-close>Cancelar</button>
+    </div>
+
+  </form>
+
+</mat-card>

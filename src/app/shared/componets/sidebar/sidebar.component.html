@@ -1,0 +1,58 @@
+<div class="centrar">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>category</mat-icon><span>Productos</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-list>
+        <mat-list-item>
+          <button class="full-width" mat-button (click)="comprar()" (click)="borrarType()">All</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <button class="full-width" mat-button (click)="comprar()" (click)="guardarType(computo)">Computo</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <button class="full-width" mat-button (click)="comprar()" (click)="guardarType(telefonia)">Telefonia</button>
+        </mat-list-item>
+      </mat-list>
+
+    </mat-expansion-panel>
+
+
+  </mat-accordion>
+
+  <mat-accordion *ngIf="isLog && role == 'admin'">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>history</mat-icon><span>Historial</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-list>
+        <mat-list-item>
+          <button class="full-width" mat-button routerLink="compras">Compras</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        
+      </mat-list>
+
+    </mat-expansion-panel>
+
+
+  </mat-accordion>
+
+  <button *ngIf="role" class="full-width" mat-button [routerLink]="'resgistroProductos'">
+    <mat-icon>category</mat-icon><span>Mis Productos</span>
+  </button>
+
+  <button mat-button *ngIf="isLog && role == 'admin'" routerLink="usuarios" class="full-width">
+    <mat-icon>manage_accounts</mat-icon>Usuarios
+  </button>
+
+</div>

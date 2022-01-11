@@ -1,0 +1,40 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  height: calc(100vh - 164px);
+  overflow: auto;
+}
+
+
+.full-width {
+  width: 100%;
+}
+
+.example-card {
+  text-align: center;
+  margin: 10px;
+
+  .imagen{
+    width: 100%;
+  }
+
+}
+
+.shopping-button{
+  color: rgb(2, 95, 138);
+  & :hover{
+    font-size: 20px;
+    color: rgb(14, 158, 184);
+  }
+}
+
+.info-button{
+  color: rgb(233, 192, 12);
+  & :hover{
+    font-size: 20px;
+    color: rgb(255, 173, 79);
+  }
+}
+
+

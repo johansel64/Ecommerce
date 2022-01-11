@@ -1,0 +1,58 @@
+<h2 mat-dialog-title class="centrar">{{titulo}}</h2>
+<div>
+  <div class="modal">
+    <form [formGroup]="formProductos.baseForm" action="">
+      <mat-form-field class="full-width-input" *ngIf="!isNew">
+        <input matInput formControlName="idProducto" type="text" placeholder="Id Producto" readonly>
+      </mat-form-field>
+
+      <mat-form-field class="full-width-input" *ngIf="!isNew" readonly>
+        <input matInput formControlName="idUsuario" type="text" placeholder="Id Usuario" >
+      </mat-form-field>
+
+      <mat-form-field class="full-width-input">
+        <mat-label>Tipo de Producto</mat-label>
+        <mat-select formControlName="nombreTipoProducto" >
+          <mat-option value="telefonia"> Telefonia</mat-option>
+          <mat-option value="computo"> Computo</mat-option>
+        </mat-select>
+      
+      </mat-form-field>
+
+      <mat-form-field class="full-width-input">
+        <input matInput formControlName="nombre" type="text" placeholder="Nombre Producto" required>
+      </mat-form-field>
+
+      <mat-form-field class="full-width-input">
+        <input matInput formControlName="descripcion" placeholder="descripcion" type="text" required>
+      </mat-form-field>
+
+      <mat-form-field class="full-width-input">
+        <input matInput formControlName="cantidad" type="number" placeholder="cantidad" required>
+      </mat-form-field>
+
+      <mat-form-field class="full-width-input">
+        <input matInput  formControlName="precioUnitario" type="number" placeholder="precioUnitario" required>
+      </mat-form-field>
+
+      <input id="file" type="file" accept=".png, .jpg, .jpeg"  required (change)="cargarImagen($event)">
+
+      <div class="imagenes">
+        <div *ngIf="imagenVista">
+          <img src={{imagenVista}} alt="">
+        </div>
+        <div *ngIf="imagen && !imagenVista">
+          <img src={{imagen}} alt="">
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+  <mat-dialog-actions>
+    <button mat-raised-button type="submit" (click)="subir()" >Aceptar</button>
+    <button mat-raised-button mat-dialog-close color="danger" color="warn">Cancelar</button>
+  </mat-dialog-actions>
+
+</div>
+

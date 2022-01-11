@@ -1,0 +1,26 @@
+.footer {
+    background-color:  #3f51b5;
+    color: #ffffff;
+    height: 100px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+a{
+    color: #ffffff;
+    margin-left: 10px;
+}
+a:hover{
+    color: #909090!important;
+}
+a:active{
+    color: #29b2db!important;
+}
+
+div a, div mat-icon{
+    font-size:15px;
+    color: #ffffff;
+}
+

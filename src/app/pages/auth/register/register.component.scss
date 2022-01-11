@@ -1,0 +1,33 @@
+.rojo {
+    
+    background-color: red;
+}
+
+.full-width-input {
+    width: 100%;
+
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.titulo {
+    padding: 10px;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+
+mat-card{
+    max-width: 450px;
+    height: auto;
+    margin: auto;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    text-align: center;
+   
+
+}

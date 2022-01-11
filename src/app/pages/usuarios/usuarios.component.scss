@@ -1,0 +1,40 @@
+
+.centrar {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1200px;
+  min-width: 300px;
+  height: calc(100vh - 164px);
+  overflow: auto;
+}
+
+
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 20%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-button-row button {
+  display: inline;
+  margin: 10px;
+}
+
+

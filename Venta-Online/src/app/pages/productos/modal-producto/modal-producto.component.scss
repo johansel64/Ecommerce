@@ -1,0 +1,28 @@
+.espacio {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+mat-card-header {
+  width: 100% !important;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(116, 116, 116);
+  box-shadow: 2px 1px 0;
+}
+
+mat-card-content {
+  padding-top: 20px;
+  border-top: 1px solid rgb(116, 116, 116);
+}
+
+.shopping-button {
+  color: rgb(2, 95, 138);
+
+  & :hover {
+    font-size: 20px;
+    color: rgb(14, 158, 184);
+  }
+}
+

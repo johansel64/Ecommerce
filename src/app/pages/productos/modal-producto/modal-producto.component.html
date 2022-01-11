@@ -1,0 +1,20 @@
+<!--Modal para productos muestra el precio, cantidad y una descripcion del mismo-->
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{nombre}}</mat-card-title>
+      <mat-card-subtitle>Cantidad {{cantidad}}</mat-card-subtitle>
+    </mat-card-header>
+    <img src={{URLimagen}} alt="Imagen de producto">
+    <mat-card-content>
+      <p>
+        <strong> PRECIO $ </strong> <var>{{precioUnitario}}</var>
+      </p>
+      <p>{{descripcion}}</p>
+    </mat-card-content>
+    <mat-card-actions class="espacio">
+      <button  mat-button (click)="addCarrito(producto)" class="shopping-button"><mat-icon>shopping_cart</mat-icon></button>
+      <button mat-raised-button mat-dialog-close color="warn">Cancelar</button>
+
+    </mat-card-actions>
+  </mat-card>

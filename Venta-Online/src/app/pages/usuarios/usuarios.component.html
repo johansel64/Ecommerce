@@ -1,0 +1,63 @@
+<div class="centrar">
+  <div class="container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.idUsuario}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="correo">
+        <th mat-header-cell *matHeaderCellDef> Correo </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.tbPersona.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="apellido1">
+        <th mat-header-cell *matHeaderCellDef> Apellido 1 </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.tbPersona.apellido1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="apellido2">
+        <th mat-header-cell *matHeaderCellDef> Apellido 2 </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.tbPersona.apellido2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="detalle">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let usuario">
+          <div class="table-button-row">
+            <button class="botones" mat-button class="btn btn-link" color="primary"
+              (click)="detalles(usuario)">Detalles</button>
+
+          </div>
+
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="eliminar">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let usuario">
+          <div class="table-button-row">
+            <button class="botones" mat-button class="btn btn-link" color="warn"
+              (click)="delete(usuario.idUsuario)">Eliminar</button>
+
+          </div>
+
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div *ngIf="registros == 0">
+
+      <img class="img-fluid" src="https://kicksdigitalmarketing.com/wp-content/uploads/2019/09/iStock-1142986365.jpg"
+        alt="">
+
+    </div>
+  </div>
+</div>

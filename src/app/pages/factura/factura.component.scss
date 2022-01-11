@@ -1,0 +1,46 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 300px;
+
+}
+
+table {
+  width: 100%;
+}
+
+h2 {
+  display: grid;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px
+}
+
+.btnCompra {
+  display: grid;
+  margin: 25px;
+}
+
+.btnCompra button {
+  width: 175px;
+  margin: 0 auto
+}
+
+td,
+th {
+  width: 20%;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.mat-table-sticky {
+  border-top: 1px solid #e0e0e0;
+}
+
+
+.imagenSinDatos {
+  width: 100%;
+  height: 100%;
+}

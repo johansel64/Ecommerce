@@ -1,0 +1,44 @@
+img {
+  height: 100px;
+}
+
+.example-container {
+  width: 1200px;
+  min-width: 300px;
+  height: calc(100vh - 164px);
+  overflow: auto;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 20%;
+}
+
+.table-button-row button {
+  display: inline;
+  margin: 5px;
+}
+
+.imagenSinDatos {
+  width: 100%;
+  height: 100%;
+}
+
+.btnFactura {
+  margin-top: 30px;
+  float: right
+}

@@ -1,0 +1,50 @@
+<div class="login">
+
+  <!-- Carta donde colocaremos el login -->
+  <mat-card>
+    <mat-card-header>
+
+    </mat-card-header>
+    <!-- Aca se muestra el contenido del login -->
+    <mat-card-content>
+      <form action="" [formGroup]="loginForm.baseForm" (ngSubmit)="onLogin()">
+
+        <img mat-card-image src="../../../../assets/img/user.png" alt="User Icon">
+
+        <mat-form-field class="full-width-input">
+          <input type="text" matInput placeholder="Usuario/Correo" formControlName="email" required>
+
+          <mat-error *ngIf="loginForm.baseForm.invalid"><!-- Validamos si nuestro campo es valido -->
+            {{email}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width-input">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="loginForm.baseForm.invalid"><!-- Validamos si nuestro campo es valido -->
+            
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Boton para hacer el login -->
+        <button class="btn" type="submit" mat-raised-button color="primary"
+        [disabled]="loginForm.baseForm.invalid" >Login</button>
+
+        <!-- Boton para logear con facebook -->
+        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon>facebook</mat-icon>
+        </button>
+
+        <a href="">¿Olvidaste tu contraseña?</a>
+        <a (click)="navigateRegister()">Crear una cuenta</a>
+
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
